@@ -17,6 +17,7 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 			CardView()
 			CardView()
 			CardView()
+			//test
 		}
 		.padding()
 		.foregroundColor(.orange)
