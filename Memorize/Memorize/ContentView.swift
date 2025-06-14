@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {// View -> behaves like a ... a protocol
 	
-    var body: some View {
+	var body: some View {
 		//Computed property //some -> can be anything as long as it behaves like a View
 		var _: String //property of this struct (String)
 		HStack{
@@ -21,22 +21,21 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 		}
 		.padding()
 		.foregroundColor(.orange)
-    }
+	}
 	
 	
 	struct CardView: View {
 		var isFaceUp: Bool = false
-
 		var body: some View {
-			if isFaceUp {
-				RoundedRectangle(cornerRadius: 12)
-			}
-			
-			ZStack() {
-				RoundedRectangle(cornerRadius: 12).fill(.white)
-				RoundedRectangle(cornerRadius: 12)
-					.strokeBorder(lineWidth: 5)
-				Text("👻").font(.largeTitle)
+			ZStack {
+				if isFaceUp {
+					RoundedRectangle(cornerRadius: 12).fill(.white)
+					RoundedRectangle(cornerRadius: 12)
+						.strokeBorder(lineWidth: 5)
+					Text("👻").font(.largeTitle)
+				}else{
+					RoundedRectangle(cornerRadius: 12)
+				}
 			}
 		}
 	}
@@ -64,5 +63,5 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 
 
 #Preview {
-    ContentView()
+	ContentView()
 }
