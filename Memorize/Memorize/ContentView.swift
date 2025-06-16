@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {// View -> behaves like a ... a protocol
+	let emojis = ["👻", "😱", "😈", "🕷️"]
+	
 	
 	var body: some View {
 		//Computed property //some -> can be anything as long as it behaves like a View
 		var _: String //property of this struct (String)
 		HStack{
-			CardView(isFaceUp: true)
-			CardView()
-			CardView()
-			CardView()
+			// let emojis: Array<String> = ["🦄", "🐇", "🐢", "🦎", "🐍", "🐉", "🐌", "🐞", "🐜", "🐛"]
+			ForEach(0..<4,id: \.self){ index in
+				CardView(content: emojis[index])
+
+			}
 			//test
 		}
 		.padding()
@@ -25,14 +28,15 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 	
 	
 	struct CardView: View {
-		@State var isFaceUp: Bool = false
+		@State var isFaceUp: Bool = true
+		let content: String
 		var body: some View {
 			ZStack {
 				let base = RoundedRectangle(cornerRadius: 12)
 				if isFaceUp {
 					base.fill(.white)
 					base.strokeBorder(lineWidth: 5)
-					Text("👻").font(.largeTitle)
+					Text(content).font(.largeTitle)
 				}else{
 					base.fill()
 				}
