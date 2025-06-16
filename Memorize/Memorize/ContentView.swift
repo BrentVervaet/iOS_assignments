@@ -16,7 +16,7 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 		var _: String //property of this struct (String)
 		HStack{
 			// let emojis: Array<String> = ["🦄", "🐇", "🐢", "🦎", "🐍", "🐉", "🐌", "🐞", "🐜", "🐛"]
-			ForEach(0..<4,id: \.self){ index in
+			ForEach(emojis.indices,id: \.self){ index in
 				CardView(content: emojis[index])
 
 			}
