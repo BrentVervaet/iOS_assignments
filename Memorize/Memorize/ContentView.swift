@@ -61,9 +61,6 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 		cardCountAdjuster(by: +1, symbol: "plus")
 	}
 	
-	
-	
-	
 	struct CardView: View {
 		@State var isFaceUp: Bool = true
 		let content: String
@@ -85,27 +82,6 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #Preview {
 	ContentView()
