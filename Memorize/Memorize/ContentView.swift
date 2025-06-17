@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {// View -> behaves like a ... a protocol
-	let emojis: Array<String> = ["🦄", "🐇", "🐢", "🦎", "🐍", "🐉", "🐌", "🐞", "🐜", "🐛"]
+	let emojis = ["🦄", "🐇", "🐢", "🦎", "🐍", "🐉", "🐌", "🐞", "🐜", "🐛"]
 	@State var cardCount = 4
 	var body: some View {
 		//Computed property //some -> can be anything as long as it behaves like a View
