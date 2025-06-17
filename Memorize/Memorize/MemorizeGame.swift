@@ -4,7 +4,7 @@
 //
 //  Created by Brent Vervaet on 17/06/2025.
 //
-
+// model is NOT a part of the UI
 import Foundation
 
 struct MemorizeGame<CardContent> {
