@@ -41,8 +41,7 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 			Spacer()
 			cardAdder
 		}
-		.imageScale(.large)
-		.font(.largeTitle)
+		.font(.title)
 	}
 	
 	func cardCountAdjuster(by offset: Int, symbol: String) -> some View{
@@ -55,11 +54,11 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 	}
 	
 	var cardRemover: some View {
-		cardCountAdjuster(by:-1, symbol: "rectangle.stack.badge.minus.fill")
+		cardCountAdjuster(by:-1, symbol: "minus")
 	}
 	
 	var cardAdder: some View{
-		cardCountAdjuster(by: +1, symbol: "rectangle.stack.badge.plus.fill")
+		cardCountAdjuster(by: +1, symbol: "plus")
 	}
 	
 	
