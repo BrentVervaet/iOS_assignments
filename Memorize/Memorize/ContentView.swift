@@ -14,6 +14,7 @@ struct ContentView: View {// View -> behaves like a ... a protocol
 		//Computed property //some -> can be anything as long as it behaves like a View
 		
 		VStack{
+			Text("Memorize!").font(.largeTitle)
 			ScrollView{
 				cards
 			}
